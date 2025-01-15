@@ -40,12 +40,12 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
    - Crear una base de datos con las credenciales que utilizas en la configuración de tu aplicación.
    - Actualizar el archivo `application.properties` en tu proyecto para que coincidan las credenciales.
      
-  ```properties
-  spring.datasource.url=jdbc:postgresql://localhost/nombre_base_datos
-  spring.datasource.username=tu_usuario
-  spring.datasource.password=tu_contraseña
-  spring.jpa.hibernate.ddl-auto=update
-  ```
+   ```properties
+   spring.datasource.url=jdbc:postgresql://localhost/nombre_base_datos
+   spring.datasource.username=tu_usuario
+   spring.datasource.password=tu_contraseña
+   spring.jpa.hibernate.ddl-auto=update
+   ```
 
 
 3. Construye el proyecto usando Maven:
@@ -87,31 +87,4 @@ Desarrollado por **Ana Roxana Marca Guzmán** como parte del programa **ONE (Ora
 ## **Licencia**
 
 [MIT](LICENSE) 
-
-
-
-## Instalación y ejecución
-
-1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/Challenge-literatura.git
-   ```
-
-2. Ingresa al directorio del proyecto:
-   ```bash
-   cd Challenge-literatura
-   ```
-
-3. Construye el proyecto usando Maven:
-   ```bash
-   mvn clean install
-   ```
-
-4. Ejecuta la aplicación:
-   ```bash
-   java -jar target/challenge-literatura-1.0.jar
-   ```
-
-
-
 
