@@ -20,25 +20,6 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
   - Buscar autor por nombre.
   - Buscar autores por rango de nacimiento.
 
-## Menú Principal
-
-<img src="images/menu-principal.png" alt="Menú Principal" width="600">
-
-## Ejemplos de uso
-
-### Buscar y registrar libros
-<img src="images/buscar-registrar-libro.png" alt="Buscar y Registrar Libros" width="600">
-
-### Estadísticas de descargas
-<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="600">
-
-### Listado de libros registrados
-<img src="images/muestra-libros-registrados.PNG" alt="Libros Registrados" width="600">
-
-### Top 10 libros más descargados
-<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="600">
-
-
 ## **Requisitos**
 
 - **Java** 8 o superior.
@@ -75,16 +56,16 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 ## Ejemplos de uso
 
 ### Buscar y registrar libros
-<img src="images/buscar-registrar-libro.PNG" alt="Buscar y Registrar Libros" width="600">
+<img src="images/buscar-registrar-libro.PNG" alt="Buscar y Registrar Libros" width="400">
 
 ### Estadísticas de descargas
-<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="600">
+<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="400">
 
 ### Listado de libros registrados
-<img src="images/muestra-libros-registrados.PNG" alt="Libros Registrados" width="600">
+<img src="images/muestra-libros-registrados.PNG" alt="Libros Registrados" width="400">
 
 ### Top 10 libros más descargados
-<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="600">
+<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="400">
 
 
 ## **Créditos**
