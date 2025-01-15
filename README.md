@@ -22,30 +22,42 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 
 ## **Requisitos**
 
-- **Java** 8 o superior.
-- Consola de comandos.
-- PostgreSQL configurado como base de datos.
+- **Java 17** o superior.
+- **Maven** para la construcción y gestión de dependencias.
+- PostgreSQL configurado como base de datos,instalado y configurado previamente..
+- Una consola para ejecutar la aplicación.
 
 ## **Instrucciones de instalación**
 
-1. **Clonar el repositorio:**
-
+1. Clona el repositorio:
    ```bash
    git clone https://github.com/Anny-rox/Challenge-literatura.git
    cd Challenge-literatura
    ```
 
-2. **Configurar la base de datos PostgreSQL:**
+2.2. **Configurar la base de datos PostgreSQL:**
 
    - Crear una base de datos con las credenciales que utilizas en la configuración de tu aplicación.
    - Actualizar el archivo `application.properties` en tu proyecto para que coincidan las credenciales.
+     
+  ```properties
+  spring.datasource.url=jdbc:postgresql://localhost/nombre_base_datos
+  spring.datasource.username=tu_usuario
+  spring.datasource.password=tu_contraseña
+  spring.jpa.hibernate.ddl-auto=update
+  ```
 
-3. **Compilar y ejecutar el proyecto:**
 
-   - Ejecutar el siguiente comando desde la raíz del proyecto:
-     ```bash
-     mvn spring-boot:run
-     ```
+3. Construye el proyecto usando Maven:
+   ```bash
+   mvn clean install
+   ```
+
+4. Ejecuta la aplicación desde consola:
+   ```bash
+   mvn spring-boot:run
+   ```
+   
 
 ## **Capturas de pantalla**
 
@@ -75,5 +87,31 @@ Desarrollado por **Ana Roxana Marca Guzmán** como parte del programa **ONE (Ora
 ## **Licencia**
 
 [MIT](LICENSE) 
+
+
+
+## Instalación y ejecución
+
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/tu-usuario/Challenge-literatura.git
+   ```
+
+2. Ingresa al directorio del proyecto:
+   ```bash
+   cd Challenge-literatura
+   ```
+
+3. Construye el proyecto usando Maven:
+   ```bash
+   mvn clean install
+   ```
+
+4. Ejecuta la aplicación:
+   ```bash
+   java -jar target/challenge-literatura-1.0.jar
+   ```
+
+
 
 
