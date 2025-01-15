@@ -39,8 +39,8 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 
    - Crear una base de datos con las credenciales que utilizas en la configuración de tu aplicación.
    - Actualizar el archivo `application.properties` en tu proyecto para que coincidan las credenciales.
-     
-   ```properties
+
+  ```properties
    spring.datasource.url=jdbc:postgresql://localhost/nombre_base_datos
    spring.datasource.username=tu_usuario
    spring.datasource.password=tu_contraseña
