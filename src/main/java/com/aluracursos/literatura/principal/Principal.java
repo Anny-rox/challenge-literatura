@@ -24,29 +24,34 @@ public class Principal {
         this.autorRepository = autorRepository;
     }
 
-
     public void muestraElMenu() {
         var opcion = -1;
         while (opcion != 0) {
             var menu = """
-                    
-                    ===============================
-                            MENU PRINCIPAL
-                    ===============================
-                    1 - Buscar libro por título
-                    2 - Listar libros registrados
-                    3 - Listar autores registrados
-                    4 - Listar autores vivos en determinado año
-                    5 - Listar libros por idioma
-                    
-                    0 - Salir
-                    ===============================
-                    
-                    """;
+                
+                ===============================
+                        MENU PRINCIPAL
+                ===============================
+                1 - Buscar libro por título
+                2 - Listar libros registrados
+                3 - Listar autores registrados
+                4 - Listar autores vivos en determinado año
+                5 - Listar libros por idioma
+                
+                0 - Salir
+                ===============================
+                
+                """;
             System.out.println(menu);
-
-            opcion = teclado.nextInt();
-            teclado.nextLine();
+            //manejando el error de usuario, el dato ingresado no es un tipo entero
+            try {
+                opcion = teclado.nextInt();
+                teclado.nextLine();
+            } catch (InputMismatchException e) {
+                System.out.println("Error: Debes ingresar un número entero.");
+                teclado.nextLine();
+                continue;
+            }
 
             switch (opcion) {
                 case 1:
@@ -71,26 +76,25 @@ public class Principal {
                     System.out.println("Opción inválida");
             }
         }
-
     }
+
 
     private DatosLibros getDatosLibros() {
         try {
-            System.out.println("Escribe el nombre del libro que deseas buscar");
+            System.out.println("\nEscribe el nombre del libro que deseas buscar:");
             var tituloLibro = teclado.nextLine().trim();
+            //manejando error de usuario: no engresar ningun dato
             if (tituloLibro.isEmpty()) {
-                System.out.println("El título no puede estar vacío.");
+                System.out.println("-----------------------------------------\n¡ERROR! El título no puede estar vacío.\n-----------------------------------------");
                 return null;
             }
-
+            //obteniendo datos de la API gutendex
             var json = consumoAPI.obtenerDatos(URL_BASE + "?search=" + tituloLibro.replace(" ", "+"));
             var datosBusqueda = conversor.obtenerDatos(json, Datos.class);
-
             var resultadosFinales = datosBusqueda.resultados().stream()
                     .filter(l -> l.titulo().toUpperCase().contains(tituloLibro.toUpperCase()))
                     .findFirst()
                     .orElse(null);
-            System.out.println(resultadosFinales);
             return resultadosFinales;
         } catch (Exception e) {
             System.out.println("Ocurrió un error al buscar el libro: " + e.getMessage());
@@ -100,10 +104,12 @@ public class Principal {
 
     private void buscarLibroPorTitulo() {
         DatosLibros datos = getDatosLibros();
+        //cuando no se encuentra informacion del libro buscado
         if (datos == null) {
-            System.out.println("No se encontraron datos para el libro.");
+            System.out.println("\n➖➖➖ No se encontraron datos para el libro. ➖➖➖");
             return;
         }
+        System.out.println(datos);
 
         // Buscar o crear autores
         List<Autor> autores = datos.autor().stream()
@@ -114,7 +120,7 @@ public class Principal {
         // Verificar si el libro ya existe
         Optional<Libro> libroExistente = libroRepository.findByTitulo(datos.titulo());
         if (libroExistente.isPresent()) {
-            System.out.println(libroExistente.get() + "\nEl libro ya existe en la base de datos: ");
+            System.out.println(libroExistente.get() + "\n➖➖➖El libro ya existe en la base de datos➖➖➖");
             return;
         }
 
@@ -151,16 +157,24 @@ public class Principal {
         mostrarAutores(autores);
     }
 
-
     private void listarAutoresVivosDeterminadoAnio() {
         System.out.println("\n************** BUSCAR AUTORES VIVOS **************");
         System.out.println("Por favor, ingresa el año para buscar los autores que estaban vivos en ese año:");
-        var anioBuscado = teclado.nextInt();
-        List<Autor> autoresVivos = autorRepository.autoresVivosEnDeterminadoAnio(anioBuscado);
-        System.out.println("\n************ LISTA DE AUTORES VIVOS EN "+anioBuscado+" *********");
-        mostrarAutores(autoresVivos);
-    }
 
+        try {
+            int anioBuscado = Integer.parseInt(teclado.nextLine());
+            List<Autor> autoresVivos = autorRepository.autoresVivosEnDeterminadoAnio(anioBuscado);
+
+            if (autoresVivos.isEmpty()) {
+                System.out.println("No se encontraron autores vivos en el año " + anioBuscado);
+            } else {
+                System.out.println("\n************ LISTA DE AUTORES VIVOS EN " + anioBuscado + " *********");
+                mostrarAutores(autoresVivos);
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Debes ingresar un número válido para el año.");
+        }
+    }
 
     private void buscarLibrosPorIdioma() {
         var menuIdioma = """
@@ -179,15 +193,17 @@ public class Principal {
                 *********************************************
                 """;
         System.out.println(menuIdioma);
-
-        System.out.println(menuIdioma);
-        var op = teclado.nextLine();
+        var op = teclado.nextLine().toLowerCase();
 
         List<Libro> librosBuscados = libroRepository.librosPoIdioma(op);
-        System.out.println("\n************ LISTA DE LIBROS ************");
-        librosBuscados.forEach(System.out::println);
-    }
 
+        if (librosBuscados.isEmpty()) {
+            System.out.println("\nNo se encontraron libros registrados en el idioma seleccionado: " + op);
+        } else {
+            System.out.println("\n************ LISTA DE LIBROS EN IDIOMA: " + op + " ************");
+            librosBuscados.forEach(System.out::println);
+        }
+    }
 
     private void mostrarAutores(List<Autor> autores) {
         autores.forEach(autor -> {
