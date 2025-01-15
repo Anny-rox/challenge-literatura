@@ -51,11 +51,11 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 
 ## Menú Principal
 Aquí está el menú principal de la aplicación, donde se presentan las opciones disponibles:
-![Menú Principal](images/menu-principal.png)
+![Menú Principal](images/menu-principal.PNG)
 
 ## Registrar y Buscar Libros
 La aplicación permite buscar libros y registrarlos en la base de datos PostgreSQL:
-![Buscar y Registrar Libros](images/buscar-registrar-libro.png)
+![Buscar y Registrar Libros](images/buscar-registrar-libro.PNG)
 
 ## Libros Registrados
 Este es un ejemplo de los libros registrados que se pueden listar desde la base de datos:
