@@ -51,7 +51,7 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 
 ## Menú Principal
 
-<img src="images/menu-principal.PNG" alt="Menú Principal" width="600">
+<img src="images/menu-principal.PNG" alt="Menú Principal" width="500">
 
 ## Ejemplos de uso
 
@@ -59,13 +59,13 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 <img src="images/buscar-registrar-libro.PNG" alt="Buscar y Registrar Libros" width="400">
 
 ### Estadísticas de descargas
-<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="400">
+<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="500">
 
 ### Listado de libros registrados
 <img src="images/muestra-libros-registrados.PNG" alt="Libros Registrados" width="400">
 
 ### Top 10 libros más descargados
-<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="400">
+<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="500">
 
 
 ## **Créditos**
