@@ -9,7 +9,15 @@ import java.util.Optional;
 
 public interface AutorRepository extends JpaRepository<Autor, Long> {
     Optional<Autor> findByNombre(String nombre);
+
     @Query("SELECT a FROM Autor a WHERE a.anioDeNacimiento <= :anio AND (a.anioDeFallecimiento IS NULL OR a.anioDeFallecimiento > :anio)")
     List<Autor> autoresVivosEnDeterminadoAnio(int anio);
+
+    @Query("SELECT a FROM Autor a WHERE a.nombre ILIKE %:nombreAutor%")
+    List<Autor> autorPorNombre(String nombreAutor);
+
+    @Query("SELECT a FROM Autor a WHERE a.anioDeNacimiento >=:inicio AND a.anioDeNacimiento <=:fin ORDER BY a.anioDeNacimiento")
+    List<Autor> autorNacidosEnRango(int inicio, int fin);
+
 
 }

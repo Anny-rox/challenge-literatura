@@ -13,8 +13,8 @@ public class Autor {
     private Long id;
     @Column(unique = true)
     private String nombre;
-    private String anioDeNacimiento;
-    private String anioDeFallecimiento;
+    private Integer anioDeNacimiento;
+    private Integer anioDeFallecimiento;
     @ManyToMany(fetch = FetchType.EAGER, mappedBy = "autores")
     private List<Libro> libros = new ArrayList<>();
 
@@ -33,11 +33,11 @@ public class Autor {
                 "Nombre='" + nombre  ;
     }
 
-    public String getAnioDeFallecimiento() {
+    public Integer getAnioDeFallecimiento() {
         return anioDeFallecimiento;
     }
 
-    public void setAnioDeFallecimiento(String anioDeFallecimiento) {
+    public void setAnioDeFallecimiento(Integer anioDeFallecimiento) {
         this.anioDeFallecimiento = anioDeFallecimiento;
     }
 
@@ -49,11 +49,11 @@ public class Autor {
         this.nombre = nombre;
     }
 
-    public String getAnioDeNacimiento() {
+    public Integer getAnioDeNacimiento() {
         return anioDeNacimiento;
     }
 
-    public void setAnioDeNacimiento(String anioDeNacimiento) {
+    public void setAnioDeNacimiento(Integer anioDeNacimiento) {
         this.anioDeNacimiento = anioDeNacimiento;
     }
 

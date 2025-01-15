@@ -42,10 +42,10 @@ public class Libro {
     public String toString() {
         return
                 "\n---------------LIBRO-----------------\n" +
-                        " Titulo = '" + titulo + "\n" +
+                        " Titulo = " + titulo + "\n" +
+                        " Autores = " + autores +"\n" +
                         " Idioma = " + idioma +"\n" +
-                        " Numero De Descargas = " + numeroDeDescargas +"\n" +
-                        " Autores = " + autores;
+                        " Numero De Descargas = " + numeroDeDescargas;
     }
 
     public List<Autor> getAutores() {
