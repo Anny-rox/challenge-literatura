@@ -31,7 +31,7 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 1. **Clonar el repositorio:**
 
    ```bash
-   git clone https://github.com/TU_USUARIO/Challenge-literatura.git
+   git clone https://github.com/Anny-rox/Challenge-literatura.git
    cd Challenge-literatura
    ```
 
