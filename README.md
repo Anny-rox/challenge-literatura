@@ -1,24 +1,43 @@
 # Challenge-Literatura
 
-Una aplicación en Java que utiliza la API Gutendex para obtener información sobre libros y realizar consultas avanzadas con una base de datos PostgreSQL.
+Una aplicación en Java que utiliza la API Gutendex para obtener información sobre libros y registrarlos en una base de datos PostgreSQL, además de ofrecer consultas y análisis sobre estos datos.
 
 ## **Descripción**
 
 Esta aplicación permite recopilar información detallada sobre libros desde la API Gutendex y registrarla en una base de datos PostgreSQL. También ofrece múltiples funcionalidades para realizar consultas sobre los datos registrados o directamente desde la API, como la generación de estadísticas y la búsqueda de autores por rangos específicos.
 
-## **Características principales**
+## Características principales
 
-- Registro automático de libros y autores en PostgreSQL.
-- Funcionalidades disponibles desde un menú interactivo:
-  1. Registrar los libros y sus autores en la base de datos en PostgreSQL.
-  2. Mostrar el listado de libros en consola.
-  3. Mostrar el listado de autores en consola.
-  4. Listar autores vivos en un año específico.
-  5. Listar libros por idioma.
-  6. Generar estadísticas (API).
-  7. Top 10 libros más descargados (API).
-  8. Buscar autores por nombre (Base de datos).
-  9. Buscar autores registrados por rango de nacimiento (Base de datos).
+- **Registrar libros y autores** en una base de datos PostgreSQL.
+- Mostrar:
+  - Listado de libros registrados.
+  - Listado de autores registrados.
+- Consultas avanzadas:
+  - Listar autores vivos en determinado año.
+  - Listar libros por idioma.
+  - Generar estadísticas de descargas.
+  - Top 10 libros más descargados.
+  - Buscar autor por nombre.
+  - Buscar autores por rango de nacimiento.
+
+## Menú Principal
+
+<img src="images/menu-principal.png" alt="Menú Principal" width="600">
+
+## Ejemplos de uso
+
+### Buscar y registrar libros
+<img src="images/buscar-registrar-libro.png" alt="Buscar y Registrar Libros" width="600">
+
+### Estadísticas de descargas
+<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="600">
+
+### Listado de libros registrados
+<img src="images/muestra-libros-registrados.PNG" alt="Libros Registrados" width="600">
+
+### Top 10 libros más descargados
+<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="600">
+
 
 ## **Requisitos**
 
@@ -50,24 +69,22 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 ## **Capturas de pantalla**
 
 ## Menú Principal
-Aquí está el menú principal de la aplicación, donde se presentan las opciones disponibles:
-![Menú Principal](images/menu-principal.PNG)
 
-## Registrar y Buscar Libros
-La aplicación permite buscar libros y registrarlos en la base de datos PostgreSQL:
-![Buscar y Registrar Libros](images/buscar-registrar-libro.PNG)
+<img src="images/menu-principal.PNG" alt="Menú Principal" width="600">
 
-## Libros Registrados
-Este es un ejemplo de los libros registrados que se pueden listar desde la base de datos:
-![Mostrar Libros Registrados](images/muestra-libros-registrados.PNG)
+## Ejemplos de uso
 
-## Estadísticas
-Genera estadísticas sobre las descargas de libros directamente desde la API:
-![Estadísticas de Descargas](images/estadisticas-de-descargas.PNG)
+### Buscar y registrar libros
+<img src="images/buscar-registrar-libro.PNG" alt="Buscar y Registrar Libros" width="600">
 
-## Top 10 Libros Más Descargados
-Este es un ejemplo del ranking generado por la aplicación:
-![Top 10 Libros Más Descargados](images/top-10-libros.PNG)
+### Estadísticas de descargas
+<img src="images/estadisticas-de-descargas.PNG" alt="Estadísticas de Descargas" width="600">
+
+### Listado de libros registrados
+<img src="images/muestra-libros-registrados.PNG" alt="Libros Registrados" width="600">
+
+### Top 10 libros más descargados
+<img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="600">
 
 
 ## **Créditos**
@@ -77,4 +94,5 @@ Desarrollado por **Ana Roxana Marca Guzmán** como parte del programa **ONE (Ora
 ## **Licencia**
 
 [MIT](LICENSE) 
+
 
