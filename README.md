@@ -1,12 +1,12 @@
-# Challenge-Literatura
+# Challenge-Literatura 📖
 
 Una aplicación en Java que utiliza la API Gutendex para obtener información sobre libros y registrarlos en una base de datos PostgreSQL, además de ofrecer consultas y análisis sobre estos datos.
 
-## **Descripción**
+## **Descripción** 💻
 
 Esta aplicación permite recopilar información detallada sobre libros desde la API Gutendex y registrarla en una base de datos PostgreSQL. También ofrece múltiples funcionalidades para realizar consultas sobre los datos registrados o directamente desde la API, como la generación de estadísticas y la búsqueda de autores por rangos específicos.
 
-## Características principales
+## Características principales ⚙️
 
 - **Registrar libros y autores** en una base de datos PostgreSQL.
 - Mostrar:
@@ -20,14 +20,14 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
   - Buscar autor por nombre.
   - Buscar autores por rango de nacimiento.
 
-## **Requisitos**
+## **Requisitos** 🛠️
 
 - **Java 17** o superior.
 - **Maven** para la construcción y gestión de dependencias.
 - PostgreSQL configurado como base de datos,instalado y configurado previamente..
 - Una consola para ejecutar la aplicación.
 
-## **Instrucciones de instalación**
+## **Instrucciones de instalación** 🚀
 
 1. Clona el repositorio:
    ```bash
@@ -58,7 +58,7 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
    ```
    
 
-## **Capturas de pantalla**
+## **Capturas de pantalla** 📷
 
 ## Menú Principal
 
@@ -79,11 +79,11 @@ Esta aplicación permite recopilar información detallada sobre libros desde la 
 <img src="images/top-10-libros.PNG" alt="Top 10 Libros Más Descargados" width="500">
 
 
-## **Créditos**
+## **Créditos**©️
 
 Desarrollado por **Ana Roxana Marca Guzmán** como parte del programa **ONE (Oracle Next Education)**.
 
-## **Licencia**
+## **Licencia**📝
 
 [MIT](LICENSE) 
 
